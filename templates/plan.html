@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Plan
+{% endblock %}
+
+{% block main %}
+    <h2>Add a new task</h2>
+    <br>
+    <form action="/plan" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="title" placeholder="Title" type="text">
+        </div>
+        <div class="mb-3">
+            <label for="when">When:</label>
+            <select autocomplete="off" autofocus class="form-control mx-auto w-auto" name="period" id="period">
+                <option value="Today">Today</option>
+                <option value="Week">Week</option>
+                <option value="Month">Month</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="type">Type:</label>
+            <select autocomplete="off" autofocus class="form-control mx-auto w-auto" name="type" id="type">
+                <option value="Home 🏠">Home 🏠</option>
+                <option value="Work 👩🏻‍💻">Work 👩🏻‍💻</option>
+                <option value="Study 📖">Study 📖</option>
+                <option value="Sports 🏀">Sports 🏀</option>
+                <option value="Friends 🎳">Friends 🎳</option>
+                <option value="Family 👨‍👩‍👦">Family 👨‍👩‍👦</option>
+                <option value="Business 💼">Business 💼</option>
+                <option value="Others 🗓️">Others 🗓️</option>
+            </select>
+        </div>
+        <button class="btn btn-dark" type="submit">Add Task</button>
+    </form>
+{% endblock %}

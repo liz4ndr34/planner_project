@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Week
+{% endblock %}
+
+{% block main %}
+<ul class="nav nav-underline justify-content-end">
+    <li class="nav-item">
+        <a class="nav-link " aria-current="page" id="enlace" href="/">Today</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" id="enlace" href="/week">Week</a>
+    </li>
+    <li class="nav-item">
+     <a class="nav-link " id="enlace" href="/month">Month</a>
+    </li>
+</ul>
+    <h2 name="title">Week</h2> <!--link to previous buttons. Missing edit and delete-->
+    <br>
+    <table class="mx-auto w-auto table table-bordered table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Title</th>
+                <th>Period</th>
+                <th>Type</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in weeks %}
+            <tr>
+                {% for cell in row %}
+                <td>{{ cell}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a class="btn btn-secondary" href="/plan" role="button">Add new task</a>
+{% endblock %}

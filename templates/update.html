@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update
+{% endblock %}
+
+{% block main %}
+    <h1>Update task</h1>
+
+    <form action="/update/{{ task_id }}" method="post">
+        <div class="mb-3">
+            {% for title in titles %}
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="title" placeholder="{{ title }}" type="text">
+            {% endfor %}
+        </div>
+        <div class="mb-3">
+            <label for="when">When:</label>
+            <select autocomplete="off" autofocus class="form-control mx-auto w-auto" name="period" id="period">
+                {% for period in periods %}
+                <option value="{{ period }}">{{ period }}</option>
+                {% endfor %}
+            </select> 
+        </div>
+        <div class="mb-3">
+            <label for="type">Type:</label>
+            <select autocomplete="off" autofocus class="form-control mx-auto w-auto" name="type" id="type">
+                {% for type in types %}
+                <option value="{{ type }}">{{ type }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}
