@@ -12,8 +12,8 @@ The application is a planner where the user can register and log in. The user ca
 * [Features](#features)
 * [Project Status](#projectstatus)
 * [Room for Improvement](#roomforimprovement)
-* [Acknowledgements](# acknowledgements)
-* [Lessons Learned](# lessonslearned)
+* [Acknowledgements](#acknowledgements)
+* [Lessons Learned](#lessonslearned)
 
 ## Technologies
 Project is created with:
